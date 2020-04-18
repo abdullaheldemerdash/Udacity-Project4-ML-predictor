@@ -29,10 +29,10 @@ source <your_venv>/bin/activate
 ### Running `app.py` Project
 
 1. Deploy in Docker:  `./run_docker.sh`
-2. Making predictions For Docker:  `./make_prediction-docker.sh`
+2. Making predictions:  `./make_prediction.sh`
 3. Upload the Docker Image:  `./upload_docker.sh`
 4. Deploy in Kubernetes:  `./run_kubernetes.sh`
-5. Making predictions For Kubernetes:  `./make_prediction-k8s.sh`
+5. Making predictions again but via K8s:  `./make_prediction.sh`
 
 ### Kubernetes Steps
 
