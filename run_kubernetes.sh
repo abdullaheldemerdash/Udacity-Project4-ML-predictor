@@ -6,17 +6,16 @@
 # This is your Docker ID/path
 # dockerpath=<>
 dockerpath="aeldemerdash/udacity-mlapi"
-k8s_deployment="mlmicroserviceapi"
+k8s_pod="mlmicroserviceapi"
 
 # Step 2
 # Run the Docker Hub container with kubernetes
-kubectl run $k8s_deployment --image=$dockerpath --port=80 --labels app=$k8s_deployment
+kubectl run $k8s_pod --image=$dockerpath --port=80 --labels="app=$k8s_pod"
 
 # Step 3:
 # List kubernetes pods
-kubectl get deployment
+kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-kubectl expose deployment $k8s_deployment --type=LoadBalancer --port=80
-minikube service mlmicroserviceapi
+kubectl port-forward $k8s_pod 8000:80
